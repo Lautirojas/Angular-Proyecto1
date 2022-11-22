@@ -9,8 +9,6 @@
 .main {
   background-color: #f0ffff;
   min-height: 75vh;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .input:-webkit-autofill,
