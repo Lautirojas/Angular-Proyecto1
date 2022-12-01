@@ -1,16 +1,18 @@
-<div class="pt-14">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nam sunt
-    doloribus nostrum vel, quas ipsum incidunt reprehenderit. Earum cumque,
-    officiis quaerat vel nisi inventore velit recusandae delectus dolorum
-    sapiente. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
-    deserunt alias, aliquam numquam ducimus praesentium eaque placeat debitis
-    quis illum nobis. Hic tempore natus aliquam nam saepe ipsam modi sint.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-    pariatur ducimus earum at, maiores ratione id soluta odio temporibus tempora
-    laboriosam eveniet. Optio architecto nobis inventore magnam a recusandae
-    maiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam,
-    eum sequi, reiciendis maiores harum reprehenderit eius et unde voluptas
-    labore nemo tempora magnam nihil doloribus aperiam quas repellat porro odit.
-  </p>
+<div class="pt-14 flex gap-10">
+  <div class="flex-col">
+    <ul class="flex gap-96">
+      <li>NOMBRE</li>
+      <li>EDAD</li>
+      <li>TITULAR</li>
+    </ul>
+    <ul
+      class="flex gap-96"
+      [ngClass]="player.titular ? 'bg-green-500' : 'bg-red-500'"
+      *ngFor="let player of players"
+    >
+      <li>{{ player.fullname | uppercase }}</li>
+      <li>{{ player.edad }}</li>
+      <li>{{ player.titular }}</li>
+    </ul>
+  </div>
 </div>

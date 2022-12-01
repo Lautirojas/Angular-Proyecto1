@@ -1,5 +1,14 @@
 <div>
   <div><img src="" alt="" /></div>
-  <div><p class="bg-black text-white p-5">my-toolbar works!</p></div>
+  <div>
+    <p class="bg-black text-white p-5">my-toolbar works!</p>
+    <p [ngClass]="nombre ? 'bg-amber-300' : ''">
+      {{ nombre }}
+    </p>
+    <button class="bg-blue-400" (click)="nombre = 'palumbo'">
+      darle nombre
+    </button>
+    <button class="bg-emerald-500" (click)="nombre = ''">vaciarlo</button>
+  </div>
   <div><img src="" alt="" /></div>
 </div>
