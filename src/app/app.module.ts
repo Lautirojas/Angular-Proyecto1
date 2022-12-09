@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
@@ -9,6 +9,8 @@ import { MyNavbarComponent } from './components/my-navbar/my-navbar.component';
 import { MyToolbarComponent } from './components/my-toolbar/my-toolbar.component';
 import { MyContentComponent } from './components/my-content/my-content.component';
 import { MyFooterComponent } from './components/my-footer/my-footer.component';
+import { MyFormLoginComponent } from './components/my-formLogin/my-formLogin.component';
+import { MyErrorHelperComponent } from './shared/my-errorHelper/my-errorHelper.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,10 @@ import { MyFooterComponent } from './components/my-footer/my-footer.component';
     MyNavbarComponent,
     MyContentComponent,
     MyFooterComponent,
+    MyFormLoginComponent,
+    MyErrorHelperComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

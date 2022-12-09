@@ -1,0 +1,81 @@
+<div class="pt-5">
+  <form [formGroup]="registerForm" class="bg-white p-5" (ngSubmit)="onSubmit()">
+    <div class="p-5 flex flex-col">
+      <label class="pr-5" for="firstName">Nombre :</label>
+      <input
+        [formControl]="firstName"
+        type="text"
+        class="bg-sky-300 border-cyan-900"
+      />
+      <small *ngIf="firstName.errors?.['required']"
+        >Este campo es requerido</small
+      >
+      <small *ngIf="firstName.errors?.['minlength']"
+        >Minimo son
+        {{ firstName.errors?.['minlength']?.['requiredLength'] | json}}
+        Caracteres
+      </small>
+      <app-my-errorHelper [control]="firstName"></app-my-errorHelper>
+    </div>
+    <div class="p-5 flex flex-col">
+      <label class="pr-5" for="lastName">Apellido :</label>
+      <input [formControl]="lastName" type="text" class="bg-sky-300" />
+      <app-my-errorHelper [control]="lastName"></app-my-errorHelper>
+      <small *ngIf="firstName.errors?.['required']"
+        >Este campo es requerido</small
+      >
+      <small *ngIf="lastName.errors?.['minlength']"
+        >Minimo son
+        {{ lastName.errors?.['minlength']?.['requiredLength'] | json}}
+        Caracteres
+      </small>
+    </div>
+    <span></span>
+    <div class="p-5 flex flex-col">
+      <label class="pr-5" for="email">Email :</label>
+      <input [formControl]="email" type="email" class="bg-sky-300" />
+      <app-my-errorHelper [control]="email"></app-my-errorHelper>
+      <small *ngIf="email.errors?.['required']">Este campo es requerido</small>
+      <small *ngIf="email.errors?.['email']">Email no valido</small>
+    </div>
+    <div class="p-5 flex flex-col">
+      <label class="pr-5" for="password">Contraseña :</label>
+      <input [formControl]="password" type="password" class="bg-sky-300" />
+      <app-my-errorHelper [control]="password"></app-my-errorHelper>
+      <small *ngIf="firstName.errors?.['required']"
+        >Este campo es requerido</small
+      >
+      <small *ngIf="password.errors?.['minlength']"
+        >Minimo son
+        {{ password.errors?.['minlength']?.['requiredLength'] | json}}
+        Caracteres
+      </small>
+    </div>
+    <div class="p-5 flex flex-col">
+      <label class="pr-5" for="password"> Repita contraseña :</label>
+      <input
+        [formControl]="repeatPassword"
+        type="password"
+        class="bg-sky-300"
+      />
+      <app-my-errorHelper [control]="repeatPassword"></app-my-errorHelper>
+      <small *ngIf="firstName.errors?.['required']"
+        >Este campo es requerido</small
+      >
+      <small *ngIf="repeatPassword.errors?.['minlength']"
+        >Minimo son
+        {{ repeatPassword.errors?.['minlength']?.['requiredLength'] | json}}
+        Caracteres
+      </small>
+    </div>
+    <div>
+      <button
+        class="bg-slate-600 p-2"
+        [disabled]="registerForm.invalid"
+        type="submit"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>

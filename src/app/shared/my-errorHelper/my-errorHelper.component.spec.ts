@@ -3,20 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { MyContentComponent } from './my-content.component';
+import { MyErrorHelperComponent } from './my-errorHelper.component';
 
-describe('MyContentComponent', () => {
-  let component: MyContentComponent;
-  let fixture: ComponentFixture<MyContentComponent>;
+describe('MyErrorHelperComponent', () => {
+  let component: MyErrorHelperComponent;
+  let fixture: ComponentFixture<MyErrorHelperComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MyContentComponent],
-    }).compileComponents();
+      declarations: [ MyErrorHelperComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MyContentComponent);
+    fixture = TestBed.createComponent(MyErrorHelperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

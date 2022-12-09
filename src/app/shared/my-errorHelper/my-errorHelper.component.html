@@ -1,0 +1,12 @@
+<small class="text-red-600">
+  <div *ngFor="let error of control?.value | keyvalue">
+    <div [ngSwitch]="error.key">
+      <div *ngSwitchCase="'required'">Este campo es requerido</div>
+      <div *ngSwitchCase="'minlength'">
+        Debe tener al menos {{ error.value }}
+      </div>
+      <div *ngSwitchCase="'email'">Debe ser un email valido</div>
+      <div *ngSwitchDefault>Error desconocido</div>
+    </div>
+  </div>
+</small>
