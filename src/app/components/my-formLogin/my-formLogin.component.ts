@@ -43,13 +43,15 @@ export class MyFormLoginComponent implements OnInit {
     }
   );
   passwordMatchesValidator() {
+    let passwordMatch: boolean;
     return () => {
-      if (this.password.value !== this.repeatPassword.value) {
-        return {
-          passwordMatch: false,
-        };
+      if (this.password.value === this.repeatPassword.value) {
+        passwordMatch = true;
+        console.log('passsword match :', passwordMatch);
+      } else {
+        passwordMatch = false;
+        return console.log('passsword match :', passwordMatch);
       }
-      return null;
     };
   }
 
