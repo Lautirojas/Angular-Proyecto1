@@ -11,6 +11,15 @@ import { MyContentComponent } from './components/my-content/my-content.component
 import { MyFooterComponent } from './components/my-footer/my-footer.component';
 import { MyFormLoginComponent } from './components/my-formLogin/my-formLogin.component';
 import { MyErrorHelperComponent } from './shared/my-errorHelper/my-errorHelper.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { PipesPipe } from './custom/pipesStudent.pipe';
+import { DirectivesDirective } from './custom/directives/directives.directive';
 
 @NgModule({
   declarations: [
@@ -21,8 +30,22 @@ import { MyErrorHelperComponent } from './shared/my-errorHelper/my-errorHelper.c
     MyFooterComponent,
     MyFormLoginComponent,
     MyErrorHelperComponent,
+    PipesPipe,
+    DirectivesDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

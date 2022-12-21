@@ -1,14 +1,17 @@
 <div>
   <div><img src="" alt="" /></div>
   <div>
-    <p class="bg-black text-white p-5">my-toolbar works!</p>
-    <p [ngClass]="nombre ? 'bg-amber-300' : ''">
+    <p class="bg-black text-white p-5" appDirectives>Mini Coderhouse</p>
+    <p [ngClass]="nombre ? 'bg-amber-300 m-2' : ''">
       {{ nombre }}
     </p>
-    <button class="bg-blue-400" (click)="nombre = 'palumbo'">
+    <button class="bg-blue-400 m-2" (click)="nombre = 'palumbo'">
       darle nombre
     </button>
-    <button class="bg-emerald-500" (click)="nombre = ''">vaciarlo</button>
+    <button class="bg-emerald-500 m-2" (click)="nombre = ''">vaciarlo</button>
+    <button class="bg-emerald-500 m-2" (click)="nombre = 'no soy un nombre'">
+      volver al principio
+    </button>
   </div>
   <div><img src="" alt="" /></div>
 </div>
