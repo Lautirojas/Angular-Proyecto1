@@ -20,6 +20,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { PipesPipe } from './custom/pipesStudent.pipe';
 import { DirectivesDirective } from './custom/directives/directives.directive';
+import { PagesModule } from './pages/pages.module';
+import { CarsModule } from './shared/modules/cars/cars.module';
+import { PokemonItemComponent } from './shared/components/pokemon-item/pokemon-item.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,14 @@ import { DirectivesDirective } from './custom/directives/directives.directive';
     MyErrorHelperComponent,
     PipesPipe,
     DirectivesDirective,
+    PokemonItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    PagesModule,
+    CarsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTableModule,

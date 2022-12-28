@@ -1,0 +1,18 @@
+<div class="p-3">
+  <h1 class="text-center">Buscador</h1>
+  <form class="mb-3 w-full" [formGroup]="form">
+    <mat-form-field class="w-full">
+      <input
+        [formControl]="searchControl"
+        matInput
+        placeholder="Son Goku"
+        class="w-full p-2"
+      />
+    </mat-form-field>
+  </form>
+  <section class="grid">
+    <div class="col-2" *ngFor="let pokemon of pokemones">
+      <app-pokemon-item [anime]="pokemon"></app-pokemon-item>
+    </div>
+  </section>
+</div>
