@@ -1,1 +1,10 @@
-<p>pokemon-item works!</p>
+<div class="flex flex-col items-center">
+  <img
+    class="mb-2"
+    [src]="
+      anime?.images?.jpg?.image_url || '../../../assets/img/image-notfound.png'
+    "
+    alt="poster"
+  />
+  <h5>{{ anime.title }}</h5>
+</div>
