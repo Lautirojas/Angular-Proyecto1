@@ -22,7 +22,6 @@ import { PipesPipe } from './custom/pipesStudent.pipe';
 import { DirectivesDirective } from './custom/directives/directives.directive';
 import { PagesModule } from './pages/pages.module';
 import { CarsModule } from './shared/modules/cars/cars.module';
-import { PokemonItemComponent } from './shared/components/pokemon-item/pokemon-item.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,6 @@ import { PokemonItemComponent } from './shared/components/pokemon-item/pokemon-i
     MyErrorHelperComponent,
     PipesPipe,
     DirectivesDirective,
-    PokemonItemComponent,
   ],
   imports: [
     BrowserModule,
