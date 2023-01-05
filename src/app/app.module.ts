@@ -12,16 +12,14 @@ import { MyFooterComponent } from './components/my-footer/my-footer.component';
 import { MyFormLoginComponent } from './components/my-formLogin/my-formLogin.component';
 import { MyErrorHelperComponent } from './shared/my-errorHelper/my-errorHelper.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material/table';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+//CUSTOM PIPES
 import { PipesPipe } from './custom/pipesStudent.pipe';
+// CUSTOM DIRECTIVES
 import { DirectivesDirective } from './custom/directives/directives.directive';
+// CUSTOM MODULES
 import { PagesModule } from './pages/pages.module';
 import { CarsModule } from './shared/modules/cars/cars.module';
+import { MyMaterialModule } from './shared/modules/my-material.module';
 
 @NgModule({
   declarations: [
@@ -41,14 +39,9 @@ import { CarsModule } from './shared/modules/cars/cars.module';
     FormsModule,
     PagesModule,
     CarsModule,
+    MyMaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatTableModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
