@@ -18,13 +18,20 @@
     </ng-container>
     <ng-container matColumnDef="isActive">
       <th mat-header-cell *matHeaderCellDef>Activo</th>
-      <td mat-cell *matCellDef="let element">{{ element.isActive }}</td>
+      <td mat-cell *matCellDef="let element">
+        <span
+          [ngClass]="
+            element.isActive === true ? 'text-emerald-400' : 'text-red-600'
+          "
+          >{{ element.isActive === true ? "Online" : "Offline" }}</span
+        >
+      </td>
     </ng-container>
     <ng-container matColumnDef="edit">
       <th mat-header-cell *matHeaderCellDef>Editar</th>
       <td mat-cell *matCellDef="let element">
         <button mat-icon-button color="accent" (click)="editStudent(element)">
-          {{ "edit" | pipeStudent : "editar" }}
+          <mat-icon>{{ "editar" | pipeStudent : "edit" }}</mat-icon>
         </button>
       </td>
     </ng-container>

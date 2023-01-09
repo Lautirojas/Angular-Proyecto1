@@ -39,6 +39,8 @@ export class MyContentComponent implements OnInit {
     'delete',
   ];
 
+  public nombre: string = '';
+
   constructor(private readonly dialogService: MatDialog) {}
 
   addStudent() {

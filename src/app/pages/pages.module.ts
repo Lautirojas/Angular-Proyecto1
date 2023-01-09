@@ -5,9 +5,8 @@ import { CarsModule } from '../shared/modules/cars/cars.module';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { PokemonItemComponent } from '../shared/components/pokemon-item/pokemon-item.component';
-import { MatInputModule } from '@angular/material/input';
+import { MyMaterialModule } from '../shared/modules/my-material.module';
 
 @NgModule({
   declarations: [StreetPageComponent, PokemonComponent, PokemonItemComponent],
@@ -16,8 +15,7 @@ import { MatInputModule } from '@angular/material/input';
     CarsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
+    MyMaterialModule,
   ],
   exports: [StreetPageComponent, PokemonComponent, PokemonItemComponent],
 })
