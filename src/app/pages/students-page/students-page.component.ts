@@ -39,8 +39,6 @@ export class StudentsPageComponent {
     'delete',
   ];
 
-  public nombre: string = '';
-
   constructor(private readonly dialogService: MatDialog) {}
 
   addStudent() {

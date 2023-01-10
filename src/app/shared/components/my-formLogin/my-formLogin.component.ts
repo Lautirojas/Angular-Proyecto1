@@ -28,7 +28,6 @@ export class MyFormLoginComponent implements OnInit {
     private readonly dialogRef: DialogRef,
     @Inject(MAT_DIALOG_DATA) public data: Student | null
   ) {
-    console.log(data);
     if (data) {
       this.registerForm.patchValue(data);
     }
