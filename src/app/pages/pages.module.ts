@@ -10,6 +10,10 @@ import { PokemonItemComponent } from '../shared/components/pokemon-item/pokemon-
 import { CoursesComponent } from './courses/courses.component';
 // MODULES
 import { SharedModule } from '../shared/shared.module';
+import { MyMaterialModule } from '../shared/modules/my-material.module';
+import { CarsModule } from '../shared/components/cars/cars.module';
+import { StudentsPageComponent } from './students-page/students-page.component';
+import { CustomPOrDModule } from '../custom/custom-p-or-d.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +21,9 @@ import { SharedModule } from '../shared/shared.module';
     PokemonComponent,
     PokemonItemComponent,
     CoursesComponent,
+    StudentsPageComponent,
   ],
-  imports: [SharedModule, CommonModule, HttpClientModule, ReactiveFormsModule],
+  imports: [SharedModule, CommonModule, HttpClientModule, ReactiveFormsModule, MyMaterialModule, CustomPOrDModule],
   exports: [StreetPageComponent, PokemonComponent, PokemonItemComponent],
 })
 export class PagesModule {}

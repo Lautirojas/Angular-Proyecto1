@@ -4,15 +4,17 @@ import { DashboardLayoutComponent } from './Layouts/dashboard-layout/dashboard-l
 import { CoursesComponent } from './pages/courses/courses.component';
 import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { MyFormLoginComponent } from './shared/components/my-formLogin/my-formLogin.component';
+import { StudentsPageComponent } from './pages/students-page/students-page.component';
 
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: DashboardLayoutComponent,
     children: [
       {
         path: 'Students',
-        component: MyFormLoginComponent,
+        component: StudentsPageComponent,
+        // component: MyFormLoginComponent,
       },
       {
         path: 'Courses',
@@ -24,9 +26,13 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: '/',
+        redirectTo: '',
       },
     ],
+  },
+  {
+    path: '**',
+    redirectTo: 'Students',
   },
 ];
 
