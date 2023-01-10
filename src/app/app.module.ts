@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // CUSTOM MODULES
 import { PagesModule } from './pages/pages.module';
-import { CarsModule } from './shared/modules/cars/cars.module';
+import { CarsModule } from './shared/components/cars/cars.module';
 import { MyMaterialModule } from './shared/modules/my-material.module';
 import { LayoutModule } from './Layouts/layout.module';
 import { SharedModule } from './shared/shared.module';
@@ -25,7 +25,6 @@ import { CustomPOrDModule } from './custom/custom-p-or-d.module';
     AppRoutingModule,
     FormsModule,
     PagesModule,
-    CarsModule,
     MyMaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

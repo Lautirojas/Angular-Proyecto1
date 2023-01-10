@@ -1,14 +1,16 @@
-<section
-  class="flex-col min-h-screen transition-all duration-100 ease-out bg-black"
->
-  <app-my-toolbar
-    class="max-w-7xl m-auto flex items-center justify-center"
-  ></app-my-toolbar>
-  <div class="main flex gap-10">
+<body class="transition-all duration-100 ease-out bg-black flex flex-col">
+  <header>
+    <app-my-toolbar
+      class="max-w-7xl m-auto flex items-center justify-center"
+    ></app-my-toolbar>
+  </header>
+  <main class="main flex gap-10 h-screen">
     <app-my-navbar class="bg-black"></app-my-navbar>
-    <app-my-content class="w-full">
+    <app-my-content class="w-full bg-sky-100">
       <router-outlet></router-outlet>
     </app-my-content>
-  </div>
-  <app-my-footer class="footer flex flex-col items-center"></app-my-footer>
-</section>
+  </main>
+  <footer>
+    <app-my-footer class="footer flex flex-col items-center"></app-my-footer>
+  </footer>
+</body>

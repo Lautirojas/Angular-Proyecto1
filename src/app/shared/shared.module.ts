@@ -9,9 +9,10 @@ import { MyErrorHelperComponent } from './my-errorHelper/my-errorHelper.componen
 // MODULES
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarsModule } from './modules/cars/cars.module';
+import { CarsModule } from './components/cars/cars.module';
 import { RouterModule } from '@angular/router';
 import { CustomPOrDModule } from '../custom/custom-p-or-d.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,13 @@ import { CustomPOrDModule } from '../custom/custom-p-or-d.module';
   imports: [
     CustomPOrDModule,
     CommonModule,
+    ReactiveFormsModule,
     MyMaterialModule,
     CarsModule,
     RouterModule,
   ],
   exports: [
+    CarsModule,
     MyContentComponent,
     MyNavbarComponent,
     MyToolbarComponent,
